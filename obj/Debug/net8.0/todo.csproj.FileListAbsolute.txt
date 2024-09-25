@@ -34,3 +34,4 @@
 /Users/nam/ws/todo/obj/Debug/net8.0/todo.pdb
 /Users/nam/ws/todo/obj/Debug/net8.0/todo.genruntimeconfig.cache
 /Users/nam/ws/todo/obj/Debug/net8.0/ref/todo.dll
+/Users/nam/ws/todo/obj/Debug/net8.0/todo.sourcelink.json

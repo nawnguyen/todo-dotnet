@@ -20,4 +20,29 @@ public class UserController(IUserRepository repo) : Microsoft.AspNetCore.Mvc.Con
         repo.AddUser(user);
         return Ok();
     }
+    
+    [HttpGet(template: "/users")]
+    public async Task<List<User>> GetUsers()
+    {
+        return repo.GetAllUsers().ToList();
+    }
+    
+    [HttpGet(template: "/users/{name}")]
+    public User GetUser(string name)
+    {
+        return repo.GetUserByName(name);
+    }
+    
+    [HttpDelete(template: "/users/{id}")]
+    public async Task<OkResult> DeleteUser(int id)
+    {
+        repo.DeleteUser(id);
+        return Ok();
+    }
+    
+    [HttpGet(template: "/users/{id}")]
+    public User GetUser(int id)
+    {
+        return repo.GetUserById(id);
+    }
 }
